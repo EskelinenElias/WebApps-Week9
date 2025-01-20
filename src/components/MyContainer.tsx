@@ -5,6 +5,7 @@ const MyContainer = () => {
   // Define list header and items
   const header = "This is a list!"
   const [items, setItems] = useState<TItem[]>([
+    { id: "0", text: "List item number 1", clicked:true } 
   ])
   
   // Define text area functions
@@ -13,7 +14,7 @@ const MyContainer = () => {
   // Function to add item to the list 
   function addItem() {
     // Create a new list item
-    const newItem = { 
+    const newItem = {
       id: `${items.length}`,
       text: text,
       clicked: false
@@ -41,7 +42,7 @@ const MyContainer = () => {
       <textarea
         value={text}
         onChange={(event) => setText(event.target.value)} 
-        placeholder="Enter new item text"
+        placeholder="Add a new item"
       />
       <button onClick={addItem}>Add Item</button>
       <MyList header={header} items={items} updateList={handleItemClick}/>
