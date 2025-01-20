@@ -21,3 +21,4 @@ const MyList: React.FC<ListProps> = ({ header, items }) => {
 };
 
 export default MyList;
+export type { TItem }; 
