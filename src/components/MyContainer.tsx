@@ -5,7 +5,7 @@ const MyContainer = () => {
   // Define list header and items
   const header = "This is a list!"
   const [items, setItems] = useState<TItem[]>([
-    { id: "0", text: "List item number 1", clicked:true } 
+    { id: "0", text: "List item number 1", clicked:false } 
   ])
   
   // Define text area functions
