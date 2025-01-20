@@ -1,10 +1,7 @@
-import MyList from "./MyList";
-
 const MyContainer = () => {
   return (
     <div>
-      <h2>List</h2>
-      <MyList />
+      <p>Container</p>
     </div>
   );
 };
