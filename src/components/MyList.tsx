@@ -1,6 +1,7 @@
 type TItem = {
-  id: number;
+  id: string;
   text: string;
+  clicked: boolean;
 }
 
 interface ListProps {

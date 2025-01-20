@@ -1,4 +1,4 @@
-import React, { useState } from 'react'; 
+import { useState } from 'react'; 
 import MyList, { TItem } from './MyList'; 
 
 const MyContainer = () => {
@@ -14,8 +14,9 @@ const MyContainer = () => {
   function addItem() {
     // Create a new list item
     const newItem = { 
-      id: items.length,
-      text: text
+      id: `${items.length}`,
+      text: text,
+      clicked: false
     }
     // Add the item to the list
     setItems([...items, newItem]);
