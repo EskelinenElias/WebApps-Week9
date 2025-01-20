@@ -23,6 +23,18 @@ const MyContainer = () => {
     // Reset text area
     setText(""); 
   }
+  
+  // Function to change list item style when clicked
+  function handleItemClick(id: string) {
+    // Update the list state
+    setItems(
+      items.map((item) =>
+        item.id === id ? { ...item, clicked: !item.clicked } : item
+      )
+    );
+  };
+  
+  // Return component layout
   return (
     <div>
       <h2>Container contents:</h2>
@@ -32,7 +44,7 @@ const MyContainer = () => {
         placeholder="Enter new item text"
       />
       <button onClick={addItem}>Add Item</button>
-      <MyList header={header} items={items}/>
+      <MyList header={header} items={items} updateList={handleItemClick}/>
     </div>
   );
 };
